@@ -17,6 +17,7 @@ public class Lorry extends Car,   Moveable, Stopable // необходимо п�
     }
 
 
+
  */
 
 }
