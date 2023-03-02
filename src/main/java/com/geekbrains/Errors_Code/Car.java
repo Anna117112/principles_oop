@@ -7,6 +7,7 @@ public abstract class Car {
 
     protected void start() {
         System.out.println("Car starting");
+
     }
 
     abstract void open();
