@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-@Component("productDaoImp")
+
 
 public class StudentDaoImp implements StudentDao {
 
@@ -69,11 +69,11 @@ public class StudentDaoImp implements StudentDao {
             try (Session session = sessionFactoryUtil.getSession()) {
 
                 session.beginTransaction();
-// вытаскиваем из бд обект с именем product.title = :title пишем так если имя подставим потом .setParameter("title",name)
+// вытаскиваем из бд обект с именем student.name = :name пишем так если имя подставим потом .setParameter("name",name)
                 Student student = session.createQuery("select student from Student student where student.name = :name",Student.class)
                         .setParameter("name",name)
                         .getSingleResult();
-                // меняем цену
+                // меняем 
                 student.setMark(mark);
                 // после коммита применяются измпенения
                 session.getTransaction().commit();
