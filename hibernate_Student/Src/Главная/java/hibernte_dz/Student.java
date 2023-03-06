@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-// хотим хранить сущьность в таблице products
+// хотим хранить сущьность в таблице 
 @Table(name = "student")
 public class Student {
     @Id
